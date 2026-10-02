@@ -69,7 +69,9 @@ Ghost এ **১৬ টা Windows কঠিনীকৰণ কাৰ্য** আ
 ### সুৰক্ষা মূল্যায়ন
 ```powershell
 # Ghost মডিউল লোড কৰক
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # বৰ্তমান সুৰক্ষা অৱস্থা পৰীক্ষা কৰক
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### বিকল্প ১: প্ৰত্যক্ষ ডাউনলোড (পৰীক্ষণ)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### বিকল্প ২: মডিউল স্থাপন
